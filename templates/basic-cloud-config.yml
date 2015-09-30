@@ -1,0 +1,11 @@
+#cloud-config
+
+users:
+  - name: dev
+    passwd: $1$SVmlvbVr$xt6zlrz.LteC5kLEp3Z/21
+    groups:
+      - sudo
+
+ssh_authorized_keys:
+  - ssh-rsa {{sshkey}}
+

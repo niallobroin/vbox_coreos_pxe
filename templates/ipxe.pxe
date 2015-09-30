@@ -1,0 +1,5 @@
+#!ipxe
+
+kernel {{base_url}}/vmlinuz
+initrd {{base_url}}/initrd.img ip=dhcp ks={{host_url}}/kickstart/centos7_minimal.ks disk_size=100000
+boot

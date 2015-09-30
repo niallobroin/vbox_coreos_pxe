@@ -1,0 +1,6 @@
+#!ipxe
+
+kernel {{base_url}}/images/coreos/coreos_production_pxe.vmlinuz cloud-config-url={{host_url}}/cloud-config/${net0/mac}/
+#console=tty0 console=ttyS0 coreos.autologin=tty1 coreos.autologin=ttyS0
+initrd {{base_url}}/images/coreos/coreos_production_pxe_image.cpio.gz
+boot
